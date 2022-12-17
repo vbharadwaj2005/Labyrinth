@@ -8,7 +8,7 @@ var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
 var width = x - 250,
-    height = y - 10;
+    height = y - 100;
     
 
 var currentPosition; 
@@ -118,7 +118,7 @@ var body = document.querySelectorAll('body');
             south,
             west;
 // makes the maze color
-        context.fillStyle = open ? "#00bbff": "transparent";
+        context.fillStyle = open ? "#66ffcc": "transparent";
         if (d0 === N) fillSouth(i1), x1 = x0, y1 = y0 - 1, d1 = S, south = true;
         else if (d0 === S) fillSouth(i0), x1 = x0, y1 = y0 + 1, d1 = N, south = true;
         else if (d0 === W) fillEast(i1), x1 = x0 - 1, y1 = y0, d1 = E, east = true;
@@ -310,9 +310,10 @@ var body = document.querySelectorAll('body');
     }
 
 document.getElementById('timer').innerHTML =
-  05 + ":" + 00;
+  10 + ":" + 00;
 startTimer();
 
+var i = 0; var j = 0;
 function startTimer() {
   var presentTime = document.getElementById('timer').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -320,7 +321,8 @@ function startTimer() {
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
   if(m<0){
-    return
+    i = 1;
+    gameComplete()
   }
   
   document.getElementById('timer').innerHTML =
@@ -335,7 +337,6 @@ function checkSecond(sec) {
   if (sec < 0) {sec = "59"};
   return sec;
 }
-var i = 0;
 const startMinutes = 1
 let time = startMinutes * 60
 const updateCountDown = () => {
@@ -352,8 +353,12 @@ const updateCountDown = () => {
 }
 //Changes the alert when you win the game
     function gameComplete() {
+      if (i==0 && j == 0){
         alert('Congratulations, you won!');
-        i = 1;
+      }
+      if (i == 1 && j == 0){
+        alert('Out of time!');
+      }
       }
 if (i != 0){
 window.addEventListener('resize', function(event) {
