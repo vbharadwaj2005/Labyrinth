@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+canvas {
+  position: absolute;
+}
+
+div {
+  position: absolute;
+  color: #EFD0CA;
+  font-size: 20px;
+  text-align: right;
+}
