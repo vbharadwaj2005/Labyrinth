@@ -7,9 +7,8 @@ var w = window,
 var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-var width = x - 250,
-    height = y - 100;
-    
+var width = 1000;
+    height = 500;
 
 var currentPosition; 
 
@@ -313,7 +312,7 @@ document.getElementById('timer').innerHTML =
   10 + ":" + 00;
 startTimer();
 
-var i = 0; var j = 0;
+var i = 0; var j = 0; var k = 0;
 function startTimer() {
   var presentTime = document.getElementById('timer').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -353,10 +352,13 @@ const updateCountDown = () => {
 }
 //Changes the alert when you win the game
     function gameComplete() {
-      if (i==0 && j == 0){
+      if (i==0 && j == 0 && k==0){
         alert('Congratulations, you won!');
+        document.getElementById('timer').innerHTML =
+  00 + ":" + 00;
+        k = 1;
       }
-      if (i == 1 && j == 0){
+      if (i == 1 && j == 0 && k==0){
         alert('Out of time!');
       }
       }
