@@ -197,7 +197,7 @@ var body = document.querySelectorAll('body');
         game.fill();
         game.beginPath();
         game.arc(playerX + (cellSize / 2), playerY + (cellSize / 2), cellSize / 2, 0, 2 * Math.PI, false);
-        game.fillStyle = "black";
+        game.fillStyle = "#202020";
         game.fill();
     }
 
@@ -308,11 +308,23 @@ var body = document.querySelectorAll('body');
       
     }
 
+var i = 0; var j = 0; var k = 0;
+
 document.getElementById('timer').innerHTML =
-  10 + ":" + 00;
+   5 + ":" + 00;
 startTimer();
 
-var i = 0; var j = 0; var k = 0;
+function checkDate() {
+    var date = new Date();
+    if(date.getHours() === 0) {
+        k = 0
+    }
+}
+
+var dateLoop = setInterval(function() {
+    checkDate();
+},5000);
+
 function startTimer() {
   var presentTime = document.getElementById('timer').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -323,12 +335,14 @@ function startTimer() {
     i = 1;
     gameComplete()
   }
-  
   document.getElementById('timer').innerHTML =
     m + ":" + s;
-  console.log(m)
   setTimeout(startTimer, 1000);
-  
+}
+function stopTimer() {
+  document.getElementById('timer').innerHTML =
+    0 + ":" + 0;
+  setTimeout(stopTimer, 0);
 }
 
 function checkSecond(sec) {
@@ -350,13 +364,13 @@ const updateCountDown = () => {
     }
   }, 1000)
 }
+
 //Changes the alert when you win the game
     function gameComplete() {
       if (i==0 && j == 0 && k==0){
         alert('Congratulations, you won!');
-        document.getElementById('timer').innerHTML =
-  00 + ":" + 00;
         k = 1;
+        stopTimer()
       }
       if (i == 1 && j == 0 && k==0){
         alert('Out of time!');
