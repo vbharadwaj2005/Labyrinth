@@ -197,7 +197,7 @@ var body = document.querySelectorAll('body');
         game.fill();
         game.beginPath();
         game.arc(playerX + (cellSize / 2), playerY + (cellSize / 2), cellSize / 2, 0, 2 * Math.PI, false);
-        game.fillStyle = "#202020";
+        game.fillStyle = "black";
         game.fill();
     }
 
@@ -311,7 +311,7 @@ var body = document.querySelectorAll('body');
 var i = 0; var j = 0; var k = 0;
 
 document.getElementById('timer').innerHTML =
-   5 + ":" + 00;
+   10 + ":" + 00;
 startTimer();
 
 function checkDate() {
@@ -365,12 +365,38 @@ const updateCountDown = () => {
   }, 1000)
 }
 
+function share(){
+  const btn = document.querySelector("#shareBtn");
+  btn.addEventListener('click', event => {
+      // Fallback, Tries to use API only
+      // if navigator.share function is
+      // available
+      if (navigator.share) {
+          navigator.share({
+            title: "Labyrinth",
+            link: "https://github.com/bharadwajisgc2005/Labyrinth"
+          }).then(() => {
+              console.log('Thanks for sharing!');
+          }).catch(err => {
+              // Handle errors, if occured
+              console.log(
+              "Error while using Web share API:");
+              console.log(err);
+          });
+      } else {
+          // Alerts user if API not available 
+          alert("Browser doesn't support this API !");
+      }
+  })
+}
+
 //Changes the alert when you win the game
     function gameComplete() {
       if (i==0 && j == 0 && k==0){
         alert('Congratulations, you won!');
         k = 1;
         stopTimer()
+        share()
       }
       if (i == 1 && j == 0 && k==0){
         alert('Out of time!');
