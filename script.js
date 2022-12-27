@@ -68,7 +68,7 @@ var body = document.querySelectorAll('body');
     );
 
 //color of the maze
-    context.fillStyle = "#ffffff";
+    context.fillStyle = "#66ffcc";
 
     // Add a random cell and two initial edges.
     var start = (cellHeight - 1) * cellWidth;
