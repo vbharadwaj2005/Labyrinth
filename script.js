@@ -8,7 +8,7 @@ var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
 var width = 1000;
-    height = 500;
+    height = 490;
 
 var currentPosition; 
 
