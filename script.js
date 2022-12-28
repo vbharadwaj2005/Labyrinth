@@ -309,6 +309,7 @@ var body = document.querySelectorAll("body");
     }
 
 var i = 0; var j = 0; var k = 0;
+share()
 
 document.getElementById("timer").innerHTML =
    10 + ":" + 00;
@@ -389,7 +390,7 @@ function share(){
 }
 var button = document.querySelector("#startBtn");
 button.addEventListener("click", function(){
-  startTimer();
+  startTimer()
 })
 //Changes the alert when you win the game
     function gameComplete() {
@@ -397,7 +398,6 @@ button.addEventListener("click", function(){
         alert("Congratulations, you won!");
         k = 1;
         stopTimer()
-        share()
       }
       if (i == 1 && j == 0 && k==0){
         alert("Out of time!");
