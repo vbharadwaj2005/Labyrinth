@@ -9,11 +9,12 @@ h3{
   color:#EFD0CA;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  text-align: center
+  text-align: center;
 }
 #startBtn{
   background-color: #303030;
   border: 0;
+  float: right;
 }
 #shareBtn{
   background-image: url(icons/share.png);
