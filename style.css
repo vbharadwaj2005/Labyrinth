@@ -11,7 +11,11 @@ h3{
   font-size: 20px;
   text-align: center
 }
-button{
+#startBtn{
+  background-color: #303030;
+  border: 0;
+}
+#shareBtn{
   background-image: url(icons/share.png);
   background-color: #303030;
   border: 0;
@@ -23,8 +27,6 @@ button{
 }
 button:hover{
   cursor: pointer;
-  display: flex;
-  justify-content: right;
   background-color: grey;
   border-radius: 3px;
 }

@@ -2,13 +2,13 @@
 var w = window,
     d = document,
     e = d.documentElement,
-    g = d.getElementsByTagName('body')[0];
+    g = d.getElementsByTagName("body")[0];
 
 var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
 var width = 1000;
-    height = 500;
+    height = 450;
 
 var currentPosition; 
 
@@ -17,7 +17,7 @@ var N = 1 << 0,
     W = 1 << 2,
     E = 1 << 3;
  
-var body = document.querySelectorAll('body');
+var body = document.querySelectorAll("body");
 
 
     var layout = [],
@@ -34,7 +34,7 @@ var body = document.querySelectorAll('body');
         maxX = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)) - 1;
 
 
-    var canvas = document.createElement('canvas');
+    var canvas = document.createElement("canvas");
 
     canvas.setAttribute("id", "canvas");
     canvas.setAttribute("width", width);
@@ -52,7 +52,7 @@ var body = document.querySelectorAll('body');
 
 
 
-    var canvas2 = document.createElement('canvas');
+    var canvas2 = document.createElement("canvas");
 
     canvas2.setAttribute("id", "canvas2");
     canvas2.setAttribute("width", width);
@@ -310,9 +310,8 @@ var body = document.querySelectorAll('body');
 
 var i = 0; var j = 0; var k = 0;
 
-document.getElementById('timer').innerHTML =
+document.getElementById("timer").innerHTML =
    10 + ":" + 00;
-startTimer();
 
 function checkDate() {
     var date = new Date();
@@ -326,7 +325,7 @@ var dateLoop = setInterval(function() {
 },5000);
 
 function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
+  var presentTime = document.getElementById("timer").innerHTML;
   var timeArray = presentTime.split(/[:]+/);
   var m = timeArray[0];
   var s = checkSecond((timeArray[1] - 1));
@@ -335,12 +334,12 @@ function startTimer() {
     i = 1;
     gameComplete()
   }
-  document.getElementById('timer').innerHTML =
+  document.getElementById("timer").innerHTML =
     m + ":" + s;
   setTimeout(startTimer, 1000);
 }
 function stopTimer() {
-  document.getElementById('timer').innerHTML =
+  document.getElementById("timer").innerHTML =
     0 + ":" + 0;
   setTimeout(stopTimer, 0);
 }
@@ -357,7 +356,7 @@ const updateCountDown = () => {
     const minutes = Math.floor(time / 60)
     const seconds = time % 60
     const result = `${parseInt(minutes)}:${parseInt(seconds)}`
-    document.getElementById('test').innerHTML = result
+    document.getElementById("test").innerHTML = result
     time--
     if (minutes === 0 && seconds === 0) {
       clearInterval(t)
@@ -367,20 +366,19 @@ const updateCountDown = () => {
 
 function share(){
   const btn = document.querySelector("#shareBtn");
-  btn.addEventListener('click', event => {
+  btn.addEventListener("click", event => {
       // Fallback, Tries to use API only
       // if navigator.share function is
       // available
       if (navigator.share) {
           navigator.share({
             title: "Labyrinth",
-            link: "https://github.com/bharadwajisgc2005/Labyrinth"
+            url: "https://github.com/bharadwajisgc2005/Labyrinth"
           }).then(() => {
-              console.log('Thanks for sharing!');
+              console.log("Thanks for sharing!");
           }).catch(err => {
               // Handle errors, if occured
-              console.log(
-              "Error while using Web share API:");
+              console.log("Error while using Web share API:");
               console.log(err);
           });
       } else {
@@ -389,31 +387,34 @@ function share(){
       }
   })
 }
-
+var button = document.querySelector("#startBtn");
+button.addEventListener("click", function(){
+  startTimer();
+})
 //Changes the alert when you win the game
     function gameComplete() {
       if (i==0 && j == 0 && k==0){
-        alert('Congratulations, you won!');
+        alert("Congratulations, you won!");
         k = 1;
         stopTimer()
         share()
       }
       if (i == 1 && j == 0 && k==0){
-        alert('Out of time!');
+        alert("Out of time!");
       }
       }
 if (i != 0){
-window.addEventListener('resize', function(event) {
+window.addEventListener("resize", function(event) {
     location.reload();
 }, true);
 }
     (function() {
         var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        var vendors = ["ms", "moz", "webkit", "o"];
         for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
+            window.requestAnimationFrame = window[vendors[x]+"RequestAnimationFrame"];
+            window.cancelAnimationFrame = window[vendors[x]+"CancelAnimationFrame"] 
+                                       || window[vendors[x]+"CancelRequestAnimationFrame"];
         }
      
         if (!window.requestAnimationFrame)
