@@ -23,11 +23,6 @@
   <li><strong>Medium:</strong> A balanced challenge with a 10-minute timer.</li>
   <li><strong>Hard:</strong> A dense, complex maze with a 15-minute timer.</li>
 </ul>
-<h3>Responsive Design:</h3>
-<p>The UI and maze scale perfectly to fit any screen, from desktops to mobile phones.</p>
-<h3>Dual Control Schemes:</h3>
-<p>Play with a keyboard on desktop or use on-screen buttons and swipe controls on touch devices.</p>
-<h2>Controls</h2>
 <ul>
   <li><strong>Desktop:</strong> Use the Arrow Keys to move.</li>
   <li><strong>Mobile:</strong> Use the on-screen directional buttons or swipe in the direction you want to move.</li>
