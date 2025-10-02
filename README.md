@@ -8,9 +8,8 @@
   </a>
 </p>
 <p align="center">
-  <img src="image.png" alt="Labyrinth Game Screenshot" width="80%">
+  <img src="public/image.png" alt="Labyrinth Game Screenshot" width="80%">
 </p>
-<hr>
 <h2>Features</h2>
 <h3>Multiple Game Modes:</h3>
 <ul>
@@ -28,7 +27,6 @@
 <p>The UI and maze scale perfectly to fit any screen, from desktops to mobile phones.</p>
 <h3>Dual Control Schemes:</h3>
 <p>Play with a keyboard on desktop or use on-screen buttons and swipe controls on touch devices.</p>
-<hr>
 <h2>Controls</h2>
 <ul>
   <li><strong>Desktop:</strong> Use the Arrow Keys to move.</li>
