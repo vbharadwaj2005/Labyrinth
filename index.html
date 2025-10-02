@@ -2,16 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="icons/maze.ico">
     <title>Labyrinth</title>
 </head>
 <body>
-    <h3>Labyrinth</h3>
-    <button id="startBtn">Start</button><br>
-    <button id="shareBtn"></button><br>
-    <div>Time left=<span id="timer"></span></div>
+    <a href="https://vbharadwaj2005.vercel.app" target="_blank" class="website-link-icon" title="Visit my page"></a>
+    <div id="gameModeOverlay">
+        <div class="modal">
+            <h1>Labyrinth</h1>
+            <h2>Select Game Mode</h2>
+            <div class="modal-buttons">
+                <button id="classicModeBtn">Classic</button>
+                <button id="endlessModeBtn">Endless</button>
+                <button id="darknessModeBtn">Darkness</button>
+            </div>
+        </div>
+    </div>
+    <div id="difficultyOverlay" class="hidden">
+        <div class="modal">
+            <h2>Select Difficulty</h2>
+            <div class="modal-buttons">
+                <button id="easyBtn">Easy</button>
+                <button id="mediumBtn">Medium</button>
+                <button id="hardBtn">Hard</button>
+            </div>
+        </div>
+    </div>
+    <div id="topBar" class="hidden">
+        <button id="backButton">&lt; Back</button>
+        <h3>Labyrinth</h3>
+        <span id="gameMessage"></span>
+        <div id="controls">
+            <span id="scoreDisplay" class="hidden">Score: 0</span>
+            <span id="winMessage"></span>
+            <span>Time Left: <span id="timer">10:00</span></span>
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+        </div>
+    </div>
+    <div id="touchControls" class="hidden">
+        <div id="touchUp" class="touch-btn">▲</div>
+        <div id="touchLeft" class="touch-btn">◀</div>
+        <div id="touchRight" class="touch-btn">▶</div>
+        <div id="touchDown" class="touch-btn">▼</div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
