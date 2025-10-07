@@ -10,6 +10,7 @@ A dynamic and responsive maze game built with HTML, CSS, and JavaScript. Navigat
   <img src="public/image.png" alt="Labyrinth Game Screenshot" width="80%">
 </p>
 ---
+
 ## Features
 ### Game Modes
 - **Classic:** Solve a single maze within the time limit.
