@@ -1,6 +1,5 @@
 # Labyrinth
 A dynamic and responsive maze game built with HTML, CSS, and JavaScript. Navigate through endless, procedurally generated mazes with multiple game modes and difficulty levels.
----
 <p align="center">
   <a href="https://vbharadwaj2005labyrinth.netlify.app/">
     <img src="https://img.shields.io/badge/Play%20the%20Game-Live%20Demo-brightgreen?style=for-the-badge&logo=netlify" alt="Play the Game">
@@ -9,7 +8,6 @@ A dynamic and responsive maze game built with HTML, CSS, and JavaScript. Navigat
 <p align="center">
   <img src="public/image.png" alt="Labyrinth Game Screenshot" width="80%">
 </p>
----
 
 ## Features
 ### Game Modes
