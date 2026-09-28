@@ -1,0 +1,91 @@
+# ===== Gradle =====
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradlew
+!gradlew.bat
+local.properties
+
+# ===== Kotlin =====
+.kotlin/
+
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+
+# ===== Eclipse =====
+.classpath
+.project
+.settings/
+bin/
+
+# ===== VS Code =====
+.vscode/
+
+# ===== NetBeans =====
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# ===== Secrets, keys & credentials (never commit) =====
+*.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.mobileprovision
+*.provisionprofile
+secrets.*
+credentials.json
+auth.json
+serviceAccountKey.json
+client_secret*.json
+.netrc
+
+# ===== SSH private keys =====
+id_rsa
+id_ed25519
+id_ecdsa
+*.ppk
+
+# ===== Logs & crash dumps =====
+*.log
+logs/
+hs_err_pid*.log
+replay_pid*.log
+
+# ===== OS junk =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===== Temporary & backup files =====
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
